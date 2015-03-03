@@ -9,14 +9,14 @@ export default function ajaxUpload({
   filesFieldName = 'files'
   }) {
 
-  files = Array.isArray(files) ? files : [files];
-
   var xhr = new XMLHttpRequest();
   var formData = new FormData();
 
-  files.forEach(function (file, i) {
-    formData.append(filesFieldName + '[' + i + ']', file, file.name);
-  });
+  for (let i = 0; i < files.length; i += 1) {
+    let file = files[i];
+    formData.append(`${filesFieldName}[${i}]`, file, file.name);
+  }
+
   Object.keys(data || {}).forEach(function (key) {
     formData.append(key, data[key])
   });
