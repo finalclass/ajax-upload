@@ -27,7 +27,6 @@ export default function ajaxUpload({
   }
 
   xhr.onload = function () {
-    ajaxing(-1);
     if (xhr.status >= 200 && xhr.status <= 400) {
       onSuccess(xhr.responseBody || JSON.parse(xhr.responseText), xhr);
     } else {
