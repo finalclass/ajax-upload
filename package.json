@@ -23,7 +23,7 @@
     "url": "https://github.com/finalclass/PACKAGE_NAME/issues"
   },
   "jspm": {
-    "main": "BoolMap.js",
+    "main": "index.js",
     "format": "es6",
     "directories": {
       "lib": "src"
