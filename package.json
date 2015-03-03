@@ -1,7 +1,7 @@
 {
   "name": "PACKAGE_NAME",
   "version": "1.0.0",
-  "description": "Ajax file uploader (ES6)",
+  "description": "DESCRIPTION",
   "main": "dist/index.js",
   "scripts": {
     "test": "jasmine-node spec/"
