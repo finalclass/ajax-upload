@@ -1,4 +1,4 @@
-function ajaxUpload({
+export default function ajaxUpload({
   files = [],
   url = '',
   data = {},
@@ -37,5 +37,3 @@ function ajaxUpload({
 
   xhr.send(formData);
 }
-
-export {ajaxUpload};
