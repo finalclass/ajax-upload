@@ -14,8 +14,8 @@ export default function ajaxUpload({
   var xhr = new XMLHttpRequest();
   var formData = new FormData();
 
-  files.forEach(function (file) {
-    formData.append(filesFieldName + '[]', file, file.name);
+  files.forEach(function (file, i) {
+    formData.append(filesFieldName + '[' + i + ']', file, file.name);
   });
   Object.keys(data || {}).forEach(function (key) {
     formData.append(key, data[key])
