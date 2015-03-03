@@ -1,6 +1,6 @@
 {
   "name": "ajax-upload",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Ajax file uploader (ES6)",
   "main": "dist/index.js",
   "scripts": {
