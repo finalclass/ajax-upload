@@ -1,14 +1,14 @@
 {
-  "name": "PACKAGE_NAME",
+  "name": "ajax-upload",
   "version": "1.0.0",
-  "description": "DESCRIPTION",
+  "description": "Ajax file uploader (ES6)",
   "main": "dist/index.js",
   "scripts": {
     "test": "jasmine-node spec/"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:finalclass/PACKAGE_NAME.git"
+    "url": "git@github.com:finalclass/ajax-upload.git"
   },
   "keywords": [
     "ajax",
@@ -20,7 +20,7 @@
   "author": "Szymon Wygnański <s@finalclass.net> (http://finalclass.net/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/finalclass/PACKAGE_NAME/issues"
+    "url": "https://github.com/finalclass/ajax-upload/issues"
   },
   "jspm": {
     "main": "index.js",
@@ -29,7 +29,7 @@
       "lib": "src"
     }
   },
-  "homepage": "https://github.com/finalclass/PACKAGE_NAME",
+  "homepage": "https://github.com/finalclass/ajax-upload",
   "devDependencies": {
     "gulp-babel": "4.0.0",
     "gulp-sourcemaps": "1.5.0",
