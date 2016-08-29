@@ -12,10 +12,9 @@ export default function ajaxUpload({
   var xhr = new XMLHttpRequest();
   var formData = new FormData();
 
-  for (let i = 0; i < files.length; i += 1) {
-    let file = files[i];
-    formData.append(`${filesFieldName}[${i}]`, file, file.name);
-  }
+  files.forEach((file) => {
+    formData.append(`${filesFieldName}[]`, file, file.name);
+  });
 
   Object.keys(data || {}).forEach(function (key) {
     formData.append(key, data[key])
@@ -27,7 +26,7 @@ export default function ajaxUpload({
   }
 
   xhr.onload = function () {
-    if (xhr.status >= 200 && xhr.status <= 400) {
+    if (xhr.status >= 200 && xhr.status < 400) {
       onSuccess(xhr.responseBody || JSON.parse(xhr.responseText), xhr);
     } else {
       onError(new Error(xhr.responseBody));
