@@ -23,7 +23,7 @@ gulp.task('min', function () {
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(uglify())
-    .pipe(rename('BoolMap.min.js'))
+    .pipe(rename('index.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
 });

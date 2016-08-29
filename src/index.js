@@ -1,4 +1,4 @@
-export default function ajaxUpload({
+function ajaxUpload({
   files = [],
   url = '',
   data = {},
@@ -6,15 +6,17 @@ export default function ajaxUpload({
   onError = ()=>undefined,
   onProgress = ()=>undefined,
   onSuccess = ()=>undefined,
-  filesFieldName = 'files'
+  filesFieldName = 'files',
+  arrayKey = '[]'
   }) {
 
   var xhr = new XMLHttpRequest();
   var formData = new FormData();
 
-  files.forEach((file) => {
-    formData.append(`${filesFieldName}[]`, file, file.name);
-  });
+  for (let i = 0; i < files.length; i += 1) {
+    let file = files[i];
+    formData.append(`${filesFieldName}${arrayKey}`, file, file.name);
+  }
 
   Object.keys(data || {}).forEach(function (key) {
     formData.append(key, data[key])

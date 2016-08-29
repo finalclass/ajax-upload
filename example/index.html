@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Uploader example</title>
+    <script src="/ajax-upload.js"></script>
+</head>
+
+<body>
+
+    <input type="file" id="fileInput" multiple/>
+
+    <script>
+        var fileInput = document.getElementById('fileInput');
+        fileInput.addEventListener('change', function onFileInputChange(event) {
+            console.log('CHANGE');
+            console.log(fileInput.files);
+            ajaxUpload({
+                files: fileInput.files,
+                url: '/upload',
+                arrayKey: '', //multer needs it
+                onSuccess: function () {
+                    console.log('Success');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

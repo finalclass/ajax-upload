@@ -1,6 +1,8 @@
 # Logs
 logs
 *.log
+example/node_modules
+example/uploads
 
 # Runtime data
 pids
